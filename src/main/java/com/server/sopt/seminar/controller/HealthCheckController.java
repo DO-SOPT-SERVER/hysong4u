@@ -1,10 +1,8 @@
 package com.server.sopt.seminar.controller;
 
 import com.server.sopt.seminar.dto.HealthCheckResponse;
-<<<<<<< HEAD
 import com.server.sopt.seminar.dto.Response;
-=======
->>>>>>> be858bb7a74d5f0e4b375239c6e636bf09373843
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,9 +43,12 @@ public class HealthCheckController {
         return ResponseEntity.ok(new HealthCheckResponse());
     }
 
-    @GetMapping("/v6") //1주차 심화과제
+    @GetMapping("/v6")
     public Response healthCheckV6() {
-        return new Response(200, "OK", true);
+        return Response.of(200, "OK", true);
     }
+
+
+
 
 }
